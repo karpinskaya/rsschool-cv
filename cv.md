@@ -7,13 +7,7 @@ I want to improve my skills in front-end development.
 I'm good at JavaScript, TypeScript and OOP.
 
 ```
-function repeatStr (n, s) {
-  let res = '';
-  
-  for (let i = 0; i < n; i++) {
-    res += s;
-  }
-  
-  return res;
+function getStatus(isBusy) {
+  return isBusy ? { status: "busy" } : { status: "available" };
 }
 ```
