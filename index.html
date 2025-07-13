@@ -1,7 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+            rel="stylesheet"
+        >
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+            rel="stylesheet"
+        >
     </head>
-    <body></body>
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__photo">
+                            <img src="img/photo.jpg" alt="karpinskaya">
+                        </div>
+                        <nav>
+                            <ul class="header__nav">
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#about"
+                                        >about</a
+                                    >
+                                </li>
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#code"
+                                        >code example</a
+                                    >
+                                </li>
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#footer"
+                                        >contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <a id="up-link" class="up-link" href="#header"
+                    ><img src="img/arrow.png" alt="back to main"
+                ></a>
+                <section class="top">
+                    <div class="container">
+                        <h1 class="top__h1">welcome to my cv</h1>
+                        <p class="top__p">I'm Valeria</p>
+                    </div>
+                </section>
+                <section id="about" class="about">
+                    <div class="container">
+                        <h2 class="h2">about</h2>
+                        <div class="about__items">
+                            <div class="item">
+                                <div class="item__title">about:</div>
+                                <div class="item__info">
+                                    I'm front-end developer with experience in
+                                    JavaScript, transitioning from SAP ABAP
+                                    development. Passionate about expanding
+                                    expertise in modern frameworks, including
+                                    React, Vue, and Next.js.
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item__title">education:</div>
+                                <div class="item__info">
+                                    Polotsk State University
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item__title">english level:</div>
+                                <div class="item__info">B1</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__title">skills:</div>
+                                <div class="item__info">
+                                    <ul class="skills">
+                                        <li class="skills__item">JS</li>
+                                        <li class="skills__item">SAP ABAP</li>
+                                        <li class="skills__item">UI5</li>
+                                        <li class="skills__item">HTML5</li>
+                                        <li class="skills__item">CSS3</li>
+                                        <li class="skills__item">BEM</li>
+                                        <li class="skills__item">Git</li>
+                                        <li class="skills__item">Figma</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="code" class="code">
+                    <div class="container">
+                        <h2 class="h2">code example</h2>
+                        <pre><code class="language-javascript">function brightest(colors) {
+    let theBrightest = colors[colors.length - 1];
+    let index = colors.length - 1;
+  
+    for (let i = colors.length - 2; i >= 0; i--) {
+        if (getBrightest(colors[i]) >= getBrightest(theBrightest)) {
+            theBrightest = colors[i];
+            index = i;
+        }
+    }
+    
+    return colors[index];
+  }
+
+function getBrightest(color) {
+    return Math.max(+`0x${color.substring(1, 3)}`, +`0x${color.substring(3, 5)}`, +`0x${color.substring(5, 7)}`);
+}</code></pre>
+                    </div>
+                </section>
+            </main>
+            <footer id="footer" class="footer">
+                <div class="container">
+                    <div class="footer__inner">
+                        <ul class="footer__nav">
+                            <li
+                                class="footer__nav-item footer__github item__title"
+                            >
+                                github:
+                                <a
+                                    class="footer__github-link item__info"
+                                    href="https://github.com/karpinskaya"
+                                    target="_blank"
+                                    >karpinskaya</a
+                                >
+                            </li>
+                            <li
+                                class="footer__nav-item footer__year item__info"
+                            >
+                                2025
+                            </li>
+                            <li class="footer__nav-item footer__rss-logo">
+                                <a
+                                    href="https://rs.school/courses/javascript-ru"
+                                    target="_blank"
+                                    ><img
+                                        src="img/rs-school-logo.png"
+                                        alt="rss-logo"
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+            const upLink = document.getElementById('up-link');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 0) {
+                    upLink.classList.add('up-link_visible');
+                } else {
+                    upLink.classList.remove('up-link_visible');
+                }
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    </body>
 </html>
