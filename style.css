@@ -1,3 +1,180 @@
-h1 {
-    font-size: 20px;
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Onest', sans-serif;
+    font-weight: 100;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    transition: all 0.3s ease-out;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 920px;
+}
+
+.header__inner {
+    display: flex;
+}
+
+.header__photo {
+    padding-left: 120px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 350px 80px 0px 80px;
+    width: 500px;
+}
+
+.header__nav-link {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.header__nav-link:hover {
+    font-weight: 400;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.up-link {
+    position: fixed;
+    right: 50px;
+    bottom: 150px;
+    display: none;
+}
+
+.up-link_visible {
+    display: block;
+}
+
+.top {
+    height: calc(100vh - 450px);
+}
+
+.top__h1 {
+    margin-top: 20px;
+    margin-left: 80px;
+    font-weight: 100;
+    font-size: 64px;
+    line-height: 100%;
+}
+
+.top__p {
+    margin-top: 30px;
+    margin-left: 350px;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.h2 {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 100%;
+}
+
+.about,
+.code {
+    min-height: 100vh;
+}
+
+.about__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item__title {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 32px;
+    color: #666666;
+}
+
+.item__info {
+    width: 700px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.skills {
+    display: flex;
+    gap: 15px;
+}
+
+.footer {
+    border-top: 1px solid #ececec;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.footer__nav-item {
+    width: 190px;
+}
+
+.footer__github {
+    display: flex;
+    gap: 5px;
+}
+
+.footer__github-link {
+    font-weight: 400;
+}
+
+.footer__year {
+    text-align: center;
+}
+
+.footer__rss-logo {
+    display: flex;
+    justify-content: flex-end;
 }
